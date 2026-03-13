@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: svm-classifier-deployment
+  labels:
+    app: svm-classifier
+spec:
+  replicas: 1 
+  selector:
+    matchLabels:
+      app: svm-classifier
+  template:
+    metadata:
+      labels:
+        app: svm-classifier
+    spec:
+      containers:
+      - name: svm-classifier
+        image: toasty106/svm_classifier:latest
+        ports:
+        - containerPort: 5002
