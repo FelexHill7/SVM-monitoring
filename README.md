@@ -14,6 +14,7 @@ This project demonstrates a complete ML monitoring pipeline using Support Vector
 - Docker
 - cAdvisor
 - Pandas
+- Kubernetes
 
 ## Successes
 
