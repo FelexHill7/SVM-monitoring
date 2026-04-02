@@ -24,6 +24,17 @@ This project demonstrates a complete ML monitoring pipeline using Support Vector
 - **Created Grafana dashboards** for real-time visualization of resource consumption and latency metrics, enabling monitoring of ML service performance.
 - **Collaborated with DevOps workflow** by containerizing the service, ensuring reproducible deployments and scalable testing.
 
+## Metrics
+
+| Pipeline Stage | 2,000 Samples | 8,000 Samples |
+|---|---|---|
+| **Tuning (GridSearchCV)** | 433.27s | 276.58s |
+| **Training** | 3.46s | 3.43s |
+| **Evaluation** | 2.74s | 2.68s |
+| **Total wall-clock** | ~439s | 282.70s |
+| **Accuracy** | — | 94.4% |
+| **Best C / gamma** | — | 10 / 0.001 |
+
 ## Challenges
 
 - **Debugging containerized environment metrics collection.** Verified container labels and Prometheus targets, adjusting PromQL queries for CPU, memory, and latency metrics to ensure correct visualization. Also exposed endpoints during training of the model for easier data scraping.
